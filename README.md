@@ -2,7 +2,8 @@
 
 A **no-code UI builder** for [Dear ImGui](https://github.com/ocornut/imgui). Lay out windows and widgets visually — no C++ written by hand — then export the result into your project.
 
-<img width="2006" height="1150" alt="изображение" src="https://github.com/user-attachments/assets/fc4be2e9-d618-4070-bf7d-0031e7de5bfc" />
+<img width="2007" height="1152" alt="изображение" src="https://github.com/user-attachments/assets/43b8d12e-0f47-4137-ba6a-442c25655b17" />
+
 
 
 ## Features
